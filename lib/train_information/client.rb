@@ -3,14 +3,15 @@ require 'open-uri'
 
 module TrainInformation
   PAGES = {
-    # Route: [Kanto page XPath number, detail page URL number]
-    山手線: [2, 21],
-    京浜東北線: [3, 22],
-    中央線: [12, 38],
-    中央総武線: [13, 40],
-    総武快速線: [30, 61],
-    内房線: [32, 63],
-    京葉線: [36, 69]
+    # Route: [Kanto page XPath table number, Kanto page XPath column number, detail page URL number]
+    山手線:     [4, 2, 21],
+    京浜東北線: [4, 3, 22],
+    中央線:     [4, 12, 38],
+    中央総武線: [4, 13, 40],
+    総武快速線: [4, 30, 61],
+    内房線:     [4, 32, 63],
+    京葉線:     [4, 36, 69],
+    小湊鉄道線: [92, 2, 149]
   }.freeze
 
   def self.get(route_array, url: false)
@@ -26,11 +27,10 @@ module TrainInformation
     message = []
 
     route_array.each do |route|
-      jreast_xpath = "//*[@id='mdAreaMajorLine']/div[4]/table/tr[#{PAGES[route.to_sym][0]}]/td[2]"
-      # kominato_xpath = '//*[@id="mdAreaMajorLine"]/div[92]/table/tbody/tr[2]/td[2]'
-      detail_url = "https://transit.yahoo.co.jp/traininfo/detail/#{PAGES[route.to_sym][1]}/0/"
+      status_xpath = "//*[@id='mdAreaMajorLine']/div[#{PAGES[route.to_sym][0]}]/table/tr[#{PAGES[route.to_sym][1]}]/td[2]"
+      detail_url = "https://transit.yahoo.co.jp/traininfo/detail/#{PAGES[route.to_sym][2]}/0/"
 
-      state = kanto_doc.xpath(jreast_xpath).first.text
+      state = kanto_doc.xpath(status_xpath).first.text
 
       case state
       when '平常運転'
@@ -43,7 +43,7 @@ module TrainInformation
 
         detail_doc = Nokogiri::HTML.parse(detail_html, nil, charset)
         description = detail_doc.xpath('//*[@id="mdServiceStatus"]/dl/dd/p').first.text
-        tate.slice!('[!]')
+        state.slice!('[!]')
 
         message << "#{route}は#{state}に変更があります。\n" + description + "\n" + detail_url
       when '[!]列車遅延'
