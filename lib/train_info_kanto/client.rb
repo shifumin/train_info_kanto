@@ -1,7 +1,7 @@
 require "nokogiri"
 require 'open-uri'
 
-module TrainInformation
+module TrainInfoKanto
   PAGES = {
     # Route: [Kanto page XPath table number, Kanto page XPath column number, detail page URL number]
     山手線:     [4, 2, 21],

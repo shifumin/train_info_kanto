@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "train_information/version"
+require "train_info_kanto/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "train_information"
-  spec.version       = TrainInformation::VERSION
+  spec.name          = "train_info_kanto"
+  spec.version       = TrainInfoKanto::VERSION
   spec.authors       = ["shifumin"]
   spec.email         = ["shifumin4230@gmail.com"]
 
-  spec.summary       = "Getting train information gem"
-  spec.description   = "Getting train information gem"
-  spec.homepage      = "https://github.com/shifumin/train_information"
+  spec.summary       = "Getting train information in the Kanto area gem"
+  spec.description   = "Getting train information in the Kanto area gem"
+  spec.homepage      = "https://github.com/shifumin/train_info_kanto"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
