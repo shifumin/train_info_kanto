@@ -6,11 +6,13 @@ module TrainInfoKanto
     # Route: [Kanto page XPath table number, Kanto page XPath column number, detail page URL number]
     山手線:     [4, 2, 21],
     京浜東北線: [4, 3, 22],
+    横須賀線:   [4, 6, 29],
     中央線:     [4, 12, 38],
     中央総武線: [4, 13, 40],
     総武快速線: [4, 30, 61],
     内房線:     [4, 32, 63],
     京葉線:     [4, 36, 69],
+    千代田線:   [10, 6, 136],
     小湊鉄道線: [92, 2, 149]
   }.freeze
 
