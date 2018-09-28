@@ -26,7 +26,7 @@ module TrainInfoKanto
 
         state = kanto_doc.xpath(status_xpath).first.text
 
-        messages << message(route, state, detail_url)
+        messages << message(route, state, url, detail_url)
       end
 
       messages
@@ -56,20 +56,24 @@ module TrainInfoKanto
       detail_doc.xpath('//*[@id="mdServiceStatus"]/dl/dd/p').first.text
     end
 
-    def message(route, state, detail_url)
-      if state == '平常運転'
-        return "#{route}は#{state}です。"
-      end
+    def message(route, state, url_option, detail_url)
+      return "#{route}は#{state}です。"  if state == '平常運転'
 
       state.slice!('[!]')
 
-      case state
-      when '運転状況'
-        "#{route}は#{state}に変更があります。\n" + description(detail_url) + "\n" + detail_url
-      when '列車遅延'
-        "#{route}は#{state}があります。\n" + description(detail_url) + "\n" + detail_url
-      when '運転見合わせ'
-        "#{route}は#{state}しています。\n" + description(detail_url) + "\n" + detail_url
+      message = case state
+                when '運転状況'
+                  "#{route}は#{state}に変更があります。"
+                when '列車遅延'
+                  "#{route}は#{state}があります。"
+                when '運転見合わせ'
+                  "#{route}は#{state}しています。"
+                end
+
+      if url_option
+        message + "\n" + description(detail_url) + "\n" + detail_url
+      else
+        message + "\n" + description(detail_url)
       end
     end
   end
