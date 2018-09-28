@@ -57,9 +57,10 @@ module TrainInfoKanto
     end
 
     def message(route, state, url_option, detail_url)
-      return "#{route}は#{state}です。"  if state == '平常運転'
-
+      state.slice!('[◯]')
       state.slice!('[!]')
+
+      return "#{route}は#{state}です。" if state == '平常運転'
 
       message = case state
                 when '運転状況'
