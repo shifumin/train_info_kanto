@@ -6,7 +6,7 @@ Train information in the Kanto area gem.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'train_info_kanto'
+gem 'train_info_kanto', github: 'shifumin/train_info_kanto'
 ```
 
 And then execute:
