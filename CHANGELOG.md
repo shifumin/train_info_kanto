@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Fix gemspec
+
 ## 0.1.1
 
 - Add Yokosuka and Chiyoda line
