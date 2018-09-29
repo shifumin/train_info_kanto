@@ -1,12 +1,13 @@
 # Train Info Kanto
-Train information in the Kanto area gem.
+
+Gem for getting train information in the Kanto area.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'train_info_kanto', github: 'shifumin/train_info_kanto'
+gem 'train_info_kanto'
 ```
 
 And then execute:
@@ -20,9 +21,27 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-irb(main):001:0> TrainInfoKanto.get(['山手線', '京浜東北線'])
+irb(main):001:0> require 'train_info_kanto'
+irb(main):002:0> TrainInfoKanto.get(['山手線', '京浜東北線'])
 => ["山手線は平常運転です。", "京浜東北線は列車遅延があります。\n宇都宮線内でドア点検を行った影響で、一部列車に遅れが出ています。 （9月21日 16時45分掲載）\nhttps://transit.yahoo.co.jp/traininfo/detail/22/0/"]
 ```
+
+## Supported routes
+
+- JR
+  - 山手線
+  - 京浜東北線
+  - 横須賀線
+  - 中央線
+  - 中央総武線
+  - 総武快速線
+  - 内房線
+  - 京葉線
+- 東京メトロ
+  - 銀座線
+  - 千代田線
+- 小湊鉄道
+  - 小湊鉄道線
 
 ## Development
 
