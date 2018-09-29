@@ -1,3 +1,7 @@
+## 0.1.3
+
+- Add Ginza line
+
 ## 0.1.2
 
 - Fix gemspec
