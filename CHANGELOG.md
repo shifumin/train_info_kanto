@@ -1,3 +1,8 @@
+## 0.1.5
+
+- Add other lines of Tokyo Metro
+- Add lines of Toei Subway
+
 ## 0.1.4
 
 - Re-release
