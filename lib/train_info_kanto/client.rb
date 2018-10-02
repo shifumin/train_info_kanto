@@ -5,6 +5,7 @@ module TrainInfoKanto
   class << self
     PAGES = {
       # Route: [Kanto page XPath table number, Kanto page XPath column number, detail page URL number]
+      # JR東日本
       山手線:     [4, 2, 21],
       京浜東北線: [4, 3, 22],
       横須賀線:   [4, 6, 29],
@@ -13,8 +14,17 @@ module TrainInfoKanto
       総武快速線: [4, 30, 61],
       内房線:     [4, 32, 63],
       京葉線:     [4, 36, 69],
+      # 東京メトロ
       銀座線:     [10, 2, 132],
+      丸ノ内線:   [10, 3, 133],
+      日比谷線:   [10, 4, 134],
+      東西線:     [10, 5, 135],
       千代田線:   [10, 6, 136],
+      有楽町線:   [10, 7, 137],
+      半蔵門線:   [10, 8, 138],
+      南北線:     [10, 9, 139],
+      副都心線:   [10, 10, 540],
+      # 小湊鉄道
       小湊鉄道線: [92, 2, 149]
     }.freeze
 
