@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "train_info_kanto"
+
+TrainInfoKanto::CLI.start(ARGV)
