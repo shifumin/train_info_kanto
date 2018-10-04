@@ -1,6 +1,7 @@
 # Train Info Kanto
 
-Gem for getting train information in the Kanto area.
+Gem for getting train information in the Kanto area.  
+train_info_kanto scrapes [Yahoo!路線情報](https://transit.yahoo.co.jp/traininfo/area/4/)  
 
 ## Installation
 
@@ -21,14 +22,24 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+$ irb
 irb(main):001:0> require 'train_info_kanto'
-irb(main):002:0> TrainInfoKanto.get(['山手線', '京浜東北線'])
+irb(main):002:0> TrainInfoKanto.get(['山手線', '京浜東北線'], url: true)
 => ["山手線は平常運転です。", "京浜東北線は列車遅延があります。\n宇都宮線内でドア点検を行った影響で、一部列車に遅れが出ています。 （9月21日 16時45分掲載）\nhttps://transit.yahoo.co.jp/traininfo/detail/22/0/"]
+```
+
+Or train_info_kanto can also used as a command.
+
+```sh
+$ train_info_kanto get 山手線 京浜東北線
+山手線は平常運転です。
+京浜東北線は列車遅延があります。
+宇都宮線内でドア点検を行った影響で、一部列車に遅れが出ています。 （9月21日 16時45分掲載）
 ```
 
 ## Supported routes
 
-- JR
+- JR東日本
   - 山手線
   - 京浜東北線
   - 横須賀線
