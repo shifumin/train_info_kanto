@@ -1,3 +1,7 @@
+## 0.1.6
+
+- Add executable command
+
 ## 0.1.5
 
 - Add other lines of Tokyo Metro
