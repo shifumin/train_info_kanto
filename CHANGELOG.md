@@ -1,3 +1,8 @@
+## 0.2.0
+
+- Add Dockerfile
+- Rename from train_info_kanto to traininfo_kanto
+
 ## 0.1.6
 
 - Add executable command
