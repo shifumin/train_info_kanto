@@ -1,18 +1,19 @@
+# frozen_string_literal: true
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "train_info_kanto/version"
+require "traininfo_kanto/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "train_info_kanto"
-  spec.version       = TrainInfoKanto::VERSION
+  spec.name          = "traininfo_kanto"
+  spec.version       = TraininfoKanto::VERSION
   spec.authors       = ["shifumin"]
   spec.email         = ["shifumin4230@gmail.com"]
 
   spec.summary       = "Gem for getting train information in the Kanto area"
   spec.description   = "This is a gem to help you " +
                        "get train operating information in the Kanto area"
-  spec.homepage      = "https://github.com/shifumin/train_info_kanto"
+  spec.homepage      = "https://github.com/shifumin/traininfo_kanto"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.

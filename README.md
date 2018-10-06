@@ -1,14 +1,14 @@
-# Train Info Kanto
+# Traininfo Kanto
 
 Gem for getting train information in the Kanto area.  
-train_info_kanto scrapes [Yahoo!路線情報](https://transit.yahoo.co.jp/traininfo/area/4/)  
+traininfo_kanto scrapes [Yahoo!路線情報](https://transit.yahoo.co.jp/traininfo/area/4/)  
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'train_info_kanto'
+gem 'traininfo_kanto'
 ```
 
 And then execute:
@@ -17,21 +17,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install train_info_kanto
+    $ gem install traininfo_kanto
 
 ## Usage
 
 ```ruby
 $ irb
-irb(main):001:0> require 'train_info_kanto'
-irb(main):002:0> TrainInfoKanto.get(['山手線', '京浜東北線'], url: true)
+irb(main):001:0> require 'traininfo_kanto'
+irb(main):002:0> TraininfoKanto.get(['山手線', '京浜東北線'], url: true)
 => ["山手線は平常運転です。", "京浜東北線は列車遅延があります。\n宇都宮線内でドア点検を行った影響で、一部列車に遅れが出ています。 （9月21日 16時45分掲載）\nhttps://transit.yahoo.co.jp/traininfo/detail/22/0/"]
 ```
 
-Or train_info_kanto can also used as a command.
+Or traininfo_kanto can also used as a command.
 
 ```sh
-$ train_info_kanto get 山手線 京浜東北線
+$ traininfo_kanto get 山手線 京浜東北線
 山手線は平常運転です。
 京浜東北線は列車遅延があります。
 宇都宮線内でドア点検を行った影響で、一部列車に遅れが出ています。 （9月21日 16時45分掲載）
@@ -74,7 +74,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/train_info_kanto. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/traininfo_kanto. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -82,4 +82,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the TrainInfoKanto project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/train_info_kanto/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the TraininfoKanto project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/traininfo_kanto/blob/master/CODE_OF_CONDUCT.md).

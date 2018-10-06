@@ -1,8 +1,8 @@
-module TrainInfoKanto
+module TraininfoKanto
   class CLI < Thor
-    desc "train_info_kanto *routes", "Get routes information"
+    desc "traininfo_kanto *routes", "Get routes information"
     def get(*routes)
-      texts = TrainInfoKanto.get(routes)
+      texts = TraininfoKanto.get(routes)
 
       texts.each do |text|
         print text

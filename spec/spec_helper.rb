@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "train_info_kanto"
+require "traininfo_kanto"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -8,6 +8,6 @@ RUN apk update && \
     libxslt-dev \
     libxml2-dev
 
-RUN gem install train_info_kanto --no-document
+RUN gem install traininfo_kanto --no-document
 
-ENTRYPOINT ["train_info_kanto"]
+ENTRYPOINT ["traininfo_kanto"]
