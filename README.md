@@ -1,5 +1,7 @@
 # Traininfo Kanto
 
+[![Gem Version](https://badge.fury.io/rb/traininfo_kanto.svg)](https://badge.fury.io/rb/traininfo_kanto)
+
 Gem for getting train information in the Kanto area.  
 traininfo_kanto scrapes [Yahoo!路線情報](https://transit.yahoo.co.jp/traininfo/area/4/)  
 
@@ -20,6 +22,7 @@ Or install it yourself as:
     $ gem install traininfo_kanto
 
 ## Usage
+### TraininfoKanto.get
 
 ```ruby
 $ irb
@@ -28,9 +31,17 @@ irb(main):002:0> TraininfoKanto.get(['山手線', '京浜東北線'], url: true)
 => ["山手線は平常運転です。", "京浜東北線は列車遅延があります。\n宇都宮線内でドア点検を行った影響で、一部列車に遅れが出ています。 （9月21日 16時45分掲載）\nhttps://transit.yahoo.co.jp/traininfo/detail/22/0/"]
 ```
 
+#### Options
+
+The defaults below are all false.  
+
+- `url` : Whether to add a URL in cases other than "平常運転".
+
+### CLI
+
 Or traininfo_kanto can also used as a command.
 
-```sh
+```bash
 $ traininfo_kanto get 山手線 京浜東北線
 山手線は平常運転です。
 京浜東北線は列車遅延があります。
@@ -65,6 +76,14 @@ $ traininfo_kanto get 山手線 京浜東北線
   - 大江戸線
 - 小湊鉄道
   - 小湊鉄道線
+
+## How to use CLI with docker
+
+[shifumin/traininfo_kanto - Docker Hub](https://hub.docker.com/r/shifumin/traininfo_kanto/)  
+
+```bash
+docker run --rm shifumin/traininfo_kanto get 山手線 中央線
+```
 
 ## Development
 
