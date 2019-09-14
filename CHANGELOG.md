@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Add a JR Sotobo line
+
 ## 0.2.0
 
 - Add Dockerfile
